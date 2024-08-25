@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Testimonials</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: #282828;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonials-wrapper {
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+      }
+
+      .testimonials {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: max-content;
+      }
+
+      .testimonial {
+        background-color: #3c3c3c;
+        padding: 0.75rem;
+        border-radius: 6px;
+        width: 180px;
+        margin-right: 8px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid white;
+      }
+
+      .testimonial:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .testimonial-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial-header h3 {
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .testimonial-body {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+
+      .carousel-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
+      .carousel-control {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: #fff;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 768px) {
+        .testimonial {
+          padding: 0.5rem;
+          border-radius: 6px;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        .testimonial-header img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .testimonial-header h3 {
+          font-size: 0.9rem;
+        }
+
+        .testimonial-body {
+          font-size: 0.7rem;
+        }
+
+        .carousel-controls {
+          gap: 5px;
+        }
+
+        .carousel-controls button {
+          padding: 4px 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: 1.4rem;
+        }
+
+        .testimonial {
+          padding: 0.5rem;
+          border-radius: 5px;
+        }
+
+        .testimonial-header img {
+          width: 35px;
+          height: 35px;
+        }
+
+        .testimonial-header h3 {
+          font-size: 0.8rem;
+        }
+
+        .testimonial-body {
+          font-size: 0.6rem;
+        }
+
+        .carousel-controls button {
+          padding: 3px 6px;
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>What Users Say</h1>
+      <p>
+        Testimonials that speak louder than words! Customer stories that light
+        up our day.
+      </p>
+
+      <div class="testimonials-wrapper">
+        <div class="testimonials" id="testimonial-carousel">
+          <div class="testimonial one">
+            <div class="testimonial-header">
+              <img src="IMAGES/img1.jpg" alt="User Profile" />
+              <h3>Marvin McKinney</h3>
+            </div>
+            <div class="testimonial-body">
+              Since switching to Swift Revel, I finally have peace of mind
+              regarding my business finances. With their secure platform, I
+              trust my data's protection completely.
+            </div>
+          </div>
+
+          <div class="testimonial two">
+            <div class="testimonial-header">
+              <img src="IMAGES/img2.jpg" alt="User Profile" />
+              <h3>Jacob Jones</h3>
+            </div>
+            <div class="testimonial-body">
+              As a budding startup, we sought a financial solution that was
+              simple, secure, and scalable. Swift Revel checked all the boxes,
+              enabling focus on growth.
+            </div>
+          </div>
+
+          <div class="testimonial three">
+            <div class="testimonial-header">
+              <img src="IMAGES/img3.jpg" alt="User Profile" />
+              <h3>Theresa Webb</h3>
+            </div>
+            <div class="testimonial-body">
+              Swift Revel empowers me to manage my business finances with
+              confidence and ease. Their integrated tax solutions ensure I'm
+              always tax compliant.
+            </div>
+          </div>
+
+          <!-- New Testimonials -->
+          <div class="testimonial">
+            <div class="testimonial-header">
+              <img src="IMAGES/img1.jpg" alt="User Profile" />
+              <h3>Leslie Alexander</h3>
+            </div>
+            <div class="testimonial-body">
+              Working with Swift Revel has been a game changer for our finances.
+              Their support team is always ready to assist, making sure our
+              needs are met promptly.
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-header">
+              <img src="IMAGES/img2.jpg" alt="User Profile" />
+              <h3>Kathryn Murphy</h3>
+            </div>
+            <div class="testimonial-body">
+              Swift Revel’s user-friendly platform made it easy for us to manage
+              our finances from day one. It’s a reliable solution that we can
+              trust.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-control" id="prevBtn">&#10094;</button>
+        <button class="carousel-control" id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+    <script>
+      const carousel = document.getElementById("testimonial-carousel");
+      const testimonials = document.querySelectorAll(".testimonial");
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+
+      let currentIndex = 0;
+      const intervalTime = 3000; // 3 seconds
+      let autoSlideInterval;
+
+      // Function to update the carousel's position
+      function updateCarousel() {
+        const offset = -currentIndex * (testimonials[0].clientWidth + 8); // Include margin-right in the calculation
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
+
+      // Function to move to the next slide
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        updateCarousel();
+      }
+
+      // Function to move to the previous slide
+      function prevSlide() {
+        currentIndex =
+          (currentIndex - 1 + testimonials.length) % testimonials.length;
+        updateCarousel();
+      }
+
+      // Function to start the automatic slider
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, intervalTime);
+      }
+
+      // Function to stop the automatic slider
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // Event listeners for manual control
+      nextBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+      });
+
+      // Resize event to update the carousel when the window size changes
+      window.addEventListener("resize", updateCarousel);
+
+      // Start the automatic slide when the page loads
+      startAutoSlide();
+    </script>
+  </body>
+</html>
